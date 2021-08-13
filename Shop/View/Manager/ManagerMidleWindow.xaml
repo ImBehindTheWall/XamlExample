@@ -1,0 +1,24 @@
+﻿<Window x:Class="Shop.View.Manager.ManagerMidleWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Shop.View.Manager"
+        mc:Ignorable="d"
+        Title="Окно Менеджера"  WindowStartupLocation="CenterScreen" Height="700" Width="450">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150"/>
+            <RowDefinition/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Button x:Name="RegCkientButton" Content="Регистрация Клиента" Style="{StaticResource PrimButton}" Click="RegCkientButton_Click"/>
+            <Button x:Name="OrderInfo" Margin="0,25,0,0" Content="Иформация о заказах" Style="{StaticResource PrimButton}" Click="OrderInfo_Click"/>
+            <Button x:Name="OrderHistoryButton" Margin="0,25,0,0" Content="История Заказов" Style="{StaticResource PrimButton}" Click="OrderHistoryButton_Click"/>
+            <Button x:Name="CategoryButton" Margin="0,25,0,0" Content="Категории" Style="{StaticResource PrimButton}"/>
+            <Button x:Name="CompanyButton" Margin="0,25,0,0" Content="Компании" Style="{StaticResource PrimButton}"/>
+        </StackPanel>
+        <Button x:Name="backButton" Content="Back" Style="{StaticResource PrimButton}" Grid.Row="2"/>
+    </Grid>
+</Window>

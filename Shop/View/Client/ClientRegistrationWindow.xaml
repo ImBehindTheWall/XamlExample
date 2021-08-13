@@ -1,0 +1,39 @@
+﻿<Window x:Class="Shop.View.ClientRegistrationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Shop.View"
+        mc:Ignorable="d"
+        Title="ClientRegistrationWindow" Height="700" Width="450" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150"/>
+            <RowDefinition/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="1"  HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="first name" Style="{StaticResource PrimLabel}"/>
+                <TextBox x:Name="FirstNameBOx" Style="{StaticResource PrimTextBox}"/>
+            </StackPanel>
+            <StackPanel Margin="0,50,0,0" Orientation="Horizontal">
+                <Label Content="Last Name" Style="{StaticResource PrimLabel}"/>
+                <TextBox x:Name="LastNameBOx" Style="{StaticResource PrimTextBox}"/>
+            </StackPanel>
+            <StackPanel Margin="0,50,0,0" Orientation="Horizontal">
+                <Label Content="Source" Style="{StaticResource PrimLabel}"/>
+                <ComboBox x:Name="SourceBox" Style="{StaticResource PrimComboBox}"/>
+            </StackPanel>
+        </StackPanel>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="AcceptButton" Content="Accept" Style="{StaticResource PrimButton}" Click="AcceptButton_Click" />
+            <Button x:Name="BackButton" Grid.Column="1" Content="Back" Style="{StaticResource PrimButton}" />
+        </Grid>
+        
+    </Grid>
+</Window>
